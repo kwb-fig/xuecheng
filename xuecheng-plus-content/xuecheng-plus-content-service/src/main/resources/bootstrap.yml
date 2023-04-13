@@ -1,0 +1,37 @@
+#微服务配置
+spring:
+  application:
+    name: content-service
+  cloud:
+    nacos:
+      server-addr: localhost:8848 #服务注册中心地址
+      config:
+        server-addr: localhost:8848 #配置中心地址
+        file-extension: yaml #指定yaml格式的配置
+        group: xuecheng-plus-project
+        namespace: dev
+        shared-configs:
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+#          - data-id: feign-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-common
+#            refresh: true
+
+  profiles:
+    active: dev   #环境名
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/xc_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
+#    username: root
+#    password: 1234567
+# 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
+
+#swagger:
+#  title: "学成在线内容管理系统"
+#  description: "内容系统管理系统对课程相关信息进行管理"
+#  base-package: com.xuecheng.content
+#  enabled: true
+#  version: 1.0.0

@@ -1,0 +1,25 @@
+### 创建课程
+POST {{content_host}}/content/course
+Content-Type: application/json
+
+{
+  "charge": "201000",
+  "price": 0,
+  "originalPrice":0,
+  "qq": "22333",
+  "wechat": "223344",
+  "phone": "13333333",
+  "validDays": 365,
+  "mt": "1-1",
+  "st": "1-1-1",
+  "name": "",
+  "pic": "111",
+  "teachmode": "200002",
+  "users": "初级人员",
+  "tags": "",
+  "grade": "204001",
+  "description": "测试课程103"
+}
+### 查询课程
+GET {{content_host}}/content/course/40
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2ODAzMjQxNjcsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6IjBjMGUwY2U5LTJkOTktNGUwZC1iMGM2LTQxZGFiNGVmNzJjNyIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.dSeUddqZAD8MTwVicpxip0n_IUz69zh2yIK_OnwdA2s
